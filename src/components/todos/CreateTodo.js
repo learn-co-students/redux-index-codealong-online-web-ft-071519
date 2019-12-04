@@ -11,6 +11,9 @@ class CreateTodo extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.dispatch({type: "ADD_TODO", payload: this.state})
+    this.setState({
+      text: '',
+    })
   }
 
   handleChange = (event) => {
